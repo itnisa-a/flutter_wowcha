@@ -1,22 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:ku_t/model/Home/Home_Manager.dart';
-import 'package:ku_t/modules/component/Header_web.dart';
-import 'package:ku_t/screens/dashboard_screen.dart';
 import 'package:sidebarx/sidebarx.dart';
-
-import 'modules/component/sidebar.dart';
 import 'modules/router/router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: FirebaseOptions(
-      apiKey: "AIzaSyAce3unDUcQ6AJZu3PtGIZFk-UNCIT5Ojw", 
-      appId: "1:1054979711267:web:c0d9aa3ebe2e72043cec96", 
-      messagingSenderId: "1054979711267", 
-      projectId: "setable-e4c54")
-  );
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyAce3unDUcQ6AJZu3PtGIZFk-UNCIT5Ojw",
+          appId: "1:1054979711267:web:c0d9aa3ebe2e72043cec96",
+          messagingSenderId: "1054979711267",
+          projectId: "setable-e4c54"));
   runApp(const MyApp());
 }
 
@@ -40,7 +34,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: router(controller: SidebarXController(selectedIndex: 0, extended: true)),
+      home: router(
+          controller: SidebarXController(selectedIndex: 0, extended: true)),
     );
   }
 }
