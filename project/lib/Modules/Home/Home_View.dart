@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ku_t/modules/router/router.dart';
+import 'package:sidebarx/sidebarx.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Jirawatsss"));
+    return router(
+        controller: SidebarXController(selectedIndex: 0, extended: true));
   }
 }

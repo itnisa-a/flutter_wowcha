@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 import 'package:unicons/unicons.dart';
 
-class SideBarXExample extends StatelessWidget {
-  const SideBarXExample({Key? key, required SidebarXController controller})
+class Navbar extends StatelessWidget {
+  const Navbar({Key? key, required SidebarXController controller})
       : _controller = controller,
         super(key: key);
   final SidebarXController _controller;

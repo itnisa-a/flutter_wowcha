@@ -71,7 +71,7 @@ class _ImportPageState extends State<ImportPage> {
               //------------------------------------------------------body web--------------------------------------------------------------------------
               Container(
                 alignment: Alignment.topLeft,
-                child: Text(
+                child: const Text(
                   "การนำเข้าข้อมูลหลักสูตร",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -92,7 +92,7 @@ class _ImportPageState extends State<ImportPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.bottomLeft,
-                                  child: Text(
+                                  child: const Text(
                                     "ปีการศึกษา",
                                     style: TextStyle(
                                       fontSize: 16,
@@ -108,7 +108,7 @@ class _ImportPageState extends State<ImportPage> {
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: DropdownButton<String?>(
-                                    hint: Text(
+                                    hint: const Text(
                                       "เลือก",
                                     ),
                                     dropdownColor: Colors.white,
@@ -148,7 +148,7 @@ class _ImportPageState extends State<ImportPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.bottomLeft,
-                                  child: Text(
+                                  child: const Text(
                                     "ค้นหารายวิชา",
                                     style: TextStyle(
                                       fontSize: 16,
@@ -163,11 +163,11 @@ class _ImportPageState extends State<ImportPage> {
                                         width:
                                             MediaQuery.of(context).size.height,
                                         decoration: BoxDecoration(
-                                            color: Color.fromRGBO(
+                                            color: const Color.fromRGBO(
                                                 230, 230, 230, 1),
                                             borderRadius:
                                                 BorderRadius.circular(15)),
-                                        child: TextField(
+                                        child: const TextField(
                                           cursorColor:
                                               Color.fromRGBO(172, 173, 191, 1),
                                           decoration: InputDecoration(
@@ -175,13 +175,12 @@ class _ImportPageState extends State<ImportPage> {
                                             hintStyle: TextStyle(fontSize: 14),
                                             hintText: "รหัสวิชา / ชื่อรายวิชา",
                                             // hintStyle: textStyle16(),
-                                            contentPadding:
-                                                const EdgeInsets.all(15),
+                                            contentPadding: EdgeInsets.all(15),
                                           ),
                                         ),
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 10,
                                     ),
                                     Container(
@@ -194,7 +193,7 @@ class _ImportPageState extends State<ImportPage> {
                                           color: Color.fromRGBO(0, 102, 94, 1)),
                                       child: TextButton(
                                         onPressed: () {},
-                                        child: Text(
+                                        child: const Text(
                                           'ค้นหา',
                                           style: TextStyle(
                                               color: Colors.white,
@@ -206,12 +205,12 @@ class _ImportPageState extends State<ImportPage> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
                               width: MediaQuery.of(context).size.height,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 8, horizontal: 10),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -222,7 +221,7 @@ class _ImportPageState extends State<ImportPage> {
                               ),
                               child: TextButton(
                                 onPressed: () {},
-                                child: Text(
+                                child: const Text(
                                   'จัดการรายวิชา',
                                   style: TextStyle(
                                       color: Color.fromRGBO(0, 102, 94, 1),
@@ -234,7 +233,7 @@ class _ImportPageState extends State<ImportPage> {
                             SizedBox(height: 10),
                             Container(
                               width: MediaQuery.of(context).size.height,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
@@ -243,7 +242,7 @@ class _ImportPageState extends State<ImportPage> {
                                 onPressed: () {
                                   //openDialog();
                                 },
-                                child: Text(
+                                child: const Text(
                                   'เพิ่มรายวิชา',
                                   style: TextStyle(
                                       color: Colors.white,
@@ -255,7 +254,7 @@ class _ImportPageState extends State<ImportPage> {
                             SizedBox(height: 10),
                             Container(
                               width: MediaQuery.of(context).size.height,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
@@ -269,7 +268,7 @@ class _ImportPageState extends State<ImportPage> {
                                     ),
                                   );
                                 },
-                                child: Text(
+                                child: const Text(
                                   'นำเข้าหลักสูตร',
                                   style: TextStyle(
                                       color: Colors.white,
@@ -282,7 +281,7 @@ class _ImportPageState extends State<ImportPage> {
                         )
                       //---------------------------------------------------end สำหรับจอแนวนอน----------------------------------------------------------
                       //------------------------------------------------สำหรับหน้าจอแนวนอน-----------------------------------------------------------
-                      : Row(
+                      : const Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SizedBox(width: 15),

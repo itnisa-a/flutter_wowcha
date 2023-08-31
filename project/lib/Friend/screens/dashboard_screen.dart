@@ -75,7 +75,7 @@ class _ManagementPageState extends State<ManagementPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.bottomLeft,
-                                  child: Text(
+                                  child: const Text(
                                     "ปีการศึกษา",
                                     style: TextStyle(
                                       fontSize: 16,
@@ -91,7 +91,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: DropdownButton<String?>(
-                                    hint: Text(
+                                    hint: const Text(
                                       "เลือก",
                                     ),
                                     dropdownColor: Colors.white,
@@ -131,7 +131,7 @@ class _ManagementPageState extends State<ManagementPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.bottomLeft,
-                                  child: Text(
+                                  child: const Text(
                                     "ค้นหารายวิชา",
                                     style: TextStyle(
                                       fontSize: 16,
@@ -146,11 +146,11 @@ class _ManagementPageState extends State<ManagementPage> {
                                         width:
                                             MediaQuery.of(context).size.height,
                                         decoration: BoxDecoration(
-                                            color: Color.fromRGBO(
+                                            color: const Color.fromRGBO(
                                                 230, 230, 230, 1),
                                             borderRadius:
                                                 BorderRadius.circular(15)),
-                                        child: TextField(
+                                        child: const TextField(
                                           cursorColor:
                                               Color.fromRGBO(172, 173, 191, 1),
                                           decoration: InputDecoration(
@@ -158,13 +158,12 @@ class _ManagementPageState extends State<ManagementPage> {
                                             hintStyle: TextStyle(fontSize: 14),
                                             hintText: "รหัสวิชา / ชื่อรายวิชา",
                                             // hintStyle: textStyle16(),
-                                            contentPadding:
-                                                const EdgeInsets.all(15),
+                                            contentPadding: EdgeInsets.all(15),
                                           ),
                                         ),
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 10,
                                     ),
                                     Container(
@@ -177,7 +176,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                           color: Color.fromRGBO(0, 102, 94, 1)),
                                       child: TextButton(
                                         onPressed: () {},
-                                        child: Text(
+                                        child: const Text(
                                           'ค้นหา',
                                           style: TextStyle(
                                               color: Colors.white,
@@ -189,12 +188,12 @@ class _ManagementPageState extends State<ManagementPage> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
                               width: MediaQuery.of(context).size.height,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 8, horizontal: 10),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -205,7 +204,7 @@ class _ManagementPageState extends State<ManagementPage> {
                               ),
                               child: TextButton(
                                 onPressed: () {},
-                                child: Text(
+                                child: const Text(
                                   'จัดการรายวิชา',
                                   style: TextStyle(
                                       color: Color.fromRGBO(0, 102, 94, 1),
@@ -217,7 +216,7 @@ class _ManagementPageState extends State<ManagementPage> {
                             SizedBox(height: 10),
                             Container(
                               width: MediaQuery.of(context).size.height,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
@@ -226,7 +225,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                 onPressed: () {
                                   openDialog();
                                 },
-                                child: Text(
+                                child: const Text(
                                   'เพิ่มรายวิชา',
                                   style: TextStyle(
                                       color: Colors.white,
@@ -238,7 +237,7 @@ class _ManagementPageState extends State<ManagementPage> {
                             SizedBox(height: 10),
                             Container(
                               width: MediaQuery.of(context).size.height,
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
@@ -255,7 +254,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                     ),
                                   );
                                 },
-                                child: Text(
+                                child: const Text(
                                   'นำเข้าหลักสูตร',
                                   style: TextStyle(
                                       color: Colors.white,
@@ -274,7 +273,7 @@ class _ManagementPageState extends State<ManagementPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.bottomLeft,
-                                  child: Text(
+                                  child: const Text(
                                     "ปีการศึกษา",
                                     style: TextStyle(
                                       fontSize: 16,
@@ -290,7 +289,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: DropdownButton<String?>(
-                                    hint: Text(
+                                    hint: const Text(
                                       "เลือก",
                                     ),
                                     value: selectedValue,
@@ -330,7 +329,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                 children: [
                                   Container(
                                     alignment: Alignment.topLeft,
-                                    child: Text(
+                                    child: const Text(
                                       "ค้นหารายวิชา",
                                       style: TextStyle(
                                         fontSize: 16,
@@ -347,12 +346,12 @@ class _ManagementPageState extends State<ManagementPage> {
                                               .size
                                               .height,
                                           decoration: BoxDecoration(
-                                            color: Color.fromRGBO(
+                                            color: const Color.fromRGBO(
                                                 230, 230, 230, 1),
                                             borderRadius:
                                                 BorderRadius.circular(15),
                                           ),
-                                          child: TextField(
+                                          child: const TextField(
                                             cursorColor: Color.fromRGBO(
                                                 172, 173, 191, 1),
                                             decoration: InputDecoration(
@@ -362,12 +361,12 @@ class _ManagementPageState extends State<ManagementPage> {
                                               hintStyle:
                                                   TextStyle(fontSize: 14),
                                               contentPadding:
-                                                  const EdgeInsets.all(15),
+                                                  EdgeInsets.all(15),
                                             ),
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Container(
@@ -381,7 +380,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                                 Color.fromRGBO(0, 102, 94, 1)),
                                         child: TextButton(
                                           onPressed: () {},
-                                          child: Text(
+                                          child: const Text(
                                             'ค้นหา',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
@@ -397,11 +396,11 @@ class _ManagementPageState extends State<ManagementPage> {
                                               .size
                                               .height,
                                           // alignment: Alignment.topRight,
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               vertical: 8, horizontal: 10),
                                           decoration: BoxDecoration(
                                             border: Border.all(
-                                                color: Color.fromRGBO(
+                                                color: const Color.fromRGBO(
                                                     0, 102, 94, 1),
                                                 width: 2),
                                             borderRadius:
@@ -410,7 +409,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                           ),
                                           child: TextButton(
                                             onPressed: () {},
-                                            child: Text(
+                                            child: const Text(
                                               'จัดการรายวิชา',
                                               style: TextStyle(
                                                   overflow:
@@ -426,18 +425,18 @@ class _ManagementPageState extends State<ManagementPage> {
                                       SizedBox(width: 10),
                                       Expanded(
                                         child: Container(
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               vertical: 10, horizontal: 10),
                                           decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(15),
-                                              color: Color.fromRGBO(
+                                              color: const Color.fromRGBO(
                                                   0, 102, 94, 1)),
                                           child: TextButton(
                                             onPressed: () {
                                               openDialog();
                                             },
-                                            child: Text(
+                                            child: const Text(
                                               'เพิ่มรายวิชา',
                                               style: TextStyle(
                                                   color: Colors.white,
@@ -452,12 +451,12 @@ class _ManagementPageState extends State<ManagementPage> {
                                       SizedBox(width: 10),
                                       Expanded(
                                         child: Container(
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               vertical: 10, horizontal: 10),
                                           decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(15),
-                                              color: Color.fromRGBO(
+                                              color: const Color.fromRGBO(
                                                   47, 51, 55, 1)),
                                           child: TextButton(
                                             onPressed: () {
@@ -472,7 +471,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                                 ),
                                               );
                                             },
-                                            child: Text(
+                                            child: const Text(
                                               'นำเข้าหลักสูตร',
                                               style: TextStyle(
                                                   color: Colors.white,
@@ -507,12 +506,12 @@ class _ManagementPageState extends State<ManagementPage> {
               padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
               child: Column(
                 children: [
-                  Text(
+                  const Text(
                     "เพิ่มรายวิชา",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -522,7 +521,7 @@ class _ManagementPageState extends State<ManagementPage> {
                           children: [
                             Container(
                               alignment: Alignment.topLeft,
-                              child: Text(
+                              child: const Text(
                                 "รหัสวิชา",
                                 style: TextStyle(
                                   fontSize: 14,
@@ -539,19 +538,19 @@ class _ManagementPageState extends State<ManagementPage> {
                                 controller: coursecodeC,
                                 keyboardType: TextInputType.number,
                                 cursorColor: Color.fromRGBO(172, 173, 191, 1),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   hintStyle: TextStyle(fontSize: 14),
                                   hintText: "รหัสวิชา",
                                   // hintStyle: textStyle16(),
-                                  contentPadding: const EdgeInsets.all(15),
+                                  contentPadding: EdgeInsets.all(15),
                                 ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Expanded(
@@ -560,7 +559,7 @@ class _ManagementPageState extends State<ManagementPage> {
                           children: [
                             Container(
                               alignment: Alignment.bottomLeft,
-                              child: Text(
+                              child: const Text(
                                 "หน่วยกิต",
                                 style: TextStyle(
                                   fontSize: 14,
@@ -610,12 +609,12 @@ class _ManagementPageState extends State<ManagementPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                     alignment: Alignment.topLeft,
-                    child: Text(
+                    child: const Text(
                       "ชื่อรายวิชา",
                       style: TextStyle(
                         fontSize: 14,
@@ -632,16 +631,16 @@ class _ManagementPageState extends State<ManagementPage> {
                       controller: coursenameC,
                       keyboardType: TextInputType.number,
                       cursorColor: Color.fromRGBO(172, 173, 191, 1),
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintStyle: TextStyle(fontSize: 14),
                         hintText: "ชื่อรายวิชา",
                         // hintStyle: textStyle16(),
-                        contentPadding: const EdgeInsets.all(15),
+                        contentPadding: EdgeInsets.all(15),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Column(
@@ -649,7 +648,7 @@ class _ManagementPageState extends State<ManagementPage> {
                     children: [
                       Container(
                         alignment: Alignment.bottomLeft,
-                        child: Text(
+                        child: const Text(
                           "อาจารย์ผู้สอน",
                           style: TextStyle(
                             fontSize: 14,
@@ -695,7 +694,7 @@ class _ManagementPageState extends State<ManagementPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Column(
@@ -703,7 +702,7 @@ class _ManagementPageState extends State<ManagementPage> {
                     children: [
                       Container(
                         alignment: Alignment.bottomLeft,
-                        child: Text(
+                        child: const Text(
                           "วิชาพื้นฐาน",
                           style: TextStyle(
                             fontSize: 14,
@@ -762,7 +761,7 @@ class _ManagementPageState extends State<ManagementPage> {
                             onPressed: () {
                               adddata();
                             },
-                            child: Text(
+                            child: const Text(
                               "ตกลง",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -772,7 +771,7 @@ class _ManagementPageState extends State<ManagementPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Expanded(
@@ -788,7 +787,7 @@ class _ManagementPageState extends State<ManagementPage> {
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            child: Text(
+                            child: const Text(
                               "ยกเลิก",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,

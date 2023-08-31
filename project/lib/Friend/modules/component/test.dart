@@ -36,7 +36,7 @@ SafeArea test() {
                         return const ImportPage();
                       case 2:
                         _key.currentState?.closeDrawer();
-                        return Center(
+                        return const Center(
                           child: Text(
                             'Settings',
                             style: TextStyle(color: Colors.white, fontSize: 40),
@@ -44,7 +44,7 @@ SafeArea test() {
                         );
                       case 3:
                         _key.currentState?.closeDrawer();
-                        return Center(
+                        return const Center(
                           child: Text(
                             'Theme',
                             style: TextStyle(color: Colors.white, fontSize: 40),

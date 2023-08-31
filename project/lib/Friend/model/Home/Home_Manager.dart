@@ -44,7 +44,7 @@ class _Home_ManagerState extends State<Home_Manager> {
                           return const ImportPage();
                         case 2:
                           _key.currentState?.closeDrawer();
-                          return Center(
+                          return const Center(
                             child: Text(
                               'Settings',
                               style:
@@ -53,7 +53,7 @@ class _Home_ManagerState extends State<Home_Manager> {
                           );
                         case 3:
                           _key.currentState?.closeDrawer();
-                          return Center(
+                          return const Center(
                             child: Text(
                               'Theme',
                               style:
