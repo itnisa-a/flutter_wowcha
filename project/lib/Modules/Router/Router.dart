@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ku_t/Modules/Componemt/Navbar.dart';
+import 'package:ku_t/Modules/Componemt/SideAppBar.dart';
 import 'package:ku_t/Modules/ManagerPage/ManagerPage.dart';
 import 'package:sidebarx/sidebarx.dart';
 
@@ -23,7 +23,7 @@ class _router extends State<router> {
           return Scaffold(
             body: Row(
               children: [
-                if (!isSmallScreen) Navbar(controller: widget._controller),
+                if (!isSmallScreen) SideBar(controller: widget._controller),
                 Expanded(
                     child: Center(
                   child: AnimatedBuilder(
