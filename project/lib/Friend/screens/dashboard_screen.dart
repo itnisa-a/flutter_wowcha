@@ -265,6 +265,7 @@ class _ManagementPageState extends State<ManagementPage> {
                             )
                           ],
                         )
+                      //////////////////////////////////
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ku_t/Modules/ManagerPage/Dashbord_Small.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key});
@@ -10,8 +11,6 @@ class MyWidget extends StatefulWidget {
 class _MyWidgetState extends State<MyWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("ชอบเป็ดปากกิ่ง"),
-    );
+    return const DashbordSmall();
   }
 }
