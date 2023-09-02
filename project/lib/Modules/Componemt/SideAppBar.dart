@@ -33,8 +33,6 @@ class SideBar extends StatelessWidget {
         selectedTextStyle: TextStyle(color: Color.fromRGBO(0, 102, 94, 1)),
       ),
       extendedTheme: const SidebarXTheme(width: 250),
-
-      // footerDivider: Divider(color:  Color.fromARGB(255, 255, 0, 0).withOpacity(0.8), height: 1,),
       headerBuilder: (context, extended) {
         return Container(
           padding: const EdgeInsets.only(top: 30),
@@ -46,7 +44,6 @@ class SideBar extends StatelessWidget {
               )),
         );
       },
-
       items: const [
         SidebarXItem(
           icon: UniconsLine.table,

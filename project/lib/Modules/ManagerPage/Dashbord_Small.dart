@@ -85,9 +85,9 @@ class _DashbordSmallState extends State<DashbordSmall> {
   Container _selectYear() {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
-        color: Color.fromRGBO(230, 230, 230, 1),
+        color: const Color.fromRGBO(230, 230, 230, 1),
         borderRadius: BorderRadius.circular(15),
       ),
       child: DropdownButton<String?>(
@@ -101,7 +101,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
             selectedValue = value;
           });
         },
-        underline: SizedBox(),
+        underline: const SizedBox(),
         isExpanded: true,
         style: TextStyle(fontSize: 14),
         items: [
@@ -124,6 +124,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Column _SearchSubject() {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -164,10 +165,10 @@ class _DashbordSmallState extends State<DashbordSmall> {
             ),
             Container(
               width: 70,
-              padding: EdgeInsets.symmetric(vertical: 10),
+              padding: const EdgeInsets.symmetric(vertical: 10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Color.fromRGBO(0, 102, 94, 1)),
+                  color: const Color.fromRGBO(0, 102, 94, 1)),
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
@@ -182,6 +183,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Container _ButtonSumject() {
     return Container(
       width: MediaQuery.of(context).size.height,
@@ -205,6 +207,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Container _ButtonAdd() {
     return Container(
       width: MediaQuery.of(context).size.height,
@@ -231,7 +234,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
             child: Container(
               height: 500,
               width: 500,
-              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
               child: Column(
                 children: [
                   const Text(
@@ -260,12 +263,13 @@ class _DashbordSmallState extends State<DashbordSmall> {
                             Container(
                               width: MediaQuery.of(context).size.height,
                               decoration: BoxDecoration(
-                                  color: Color.fromRGBO(230, 230, 230, 1),
+                                  color: const Color.fromRGBO(230, 230, 230, 1),
                                   borderRadius: BorderRadius.circular(15)),
                               child: TextFormField(
                                 controller: coursecodeC,
                                 keyboardType: TextInputType.number,
-                                cursorColor: Color.fromRGBO(172, 173, 191, 1),
+                                cursorColor:
+                                    const Color.fromRGBO(172, 173, 191, 1),
                                 decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   hintStyle: TextStyle(fontSize: 14),
@@ -297,7 +301,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  color: Color.fromRGBO(230, 230, 230, 1),
+                                  color: const Color.fromRGBO(230, 230, 230, 1),
                                   borderRadius: BorderRadius.circular(15)),
                               child: DropdownButtonFormField(
                                   hint: const Text(
@@ -353,12 +357,12 @@ class _DashbordSmallState extends State<DashbordSmall> {
                   Container(
                     // width: MediaQuery.of(context).size.height,
                     decoration: BoxDecoration(
-                        color: Color.fromRGBO(230, 230, 230, 1),
+                        color: const Color.fromRGBO(230, 230, 230, 1),
                         borderRadius: BorderRadius.circular(15)),
                     child: TextFormField(
                       controller: coursenameC,
                       keyboardType: TextInputType.number,
-                      cursorColor: Color.fromRGBO(172, 173, 191, 1),
+                      cursorColor: const Color.fromRGBO(172, 173, 191, 1),
                       decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintStyle: TextStyle(fontSize: 14),
@@ -386,7 +390,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                            color: Color.fromRGBO(230, 230, 230, 1),
+                            color: const Color.fromRGBO(230, 230, 230, 1),
                             borderRadius: BorderRadius.circular(15)),
                         child: DropdownButtonFormField(
                             hint: const Text(
@@ -440,7 +444,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                            color: Color.fromRGBO(230, 230, 230, 1),
+                            color: const Color.fromRGBO(230, 230, 230, 1),
                             borderRadius: BorderRadius.circular(15)),
                         child: DropdownButtonFormField(
                             hint: const Text(
@@ -476,15 +480,15 @@ class _DashbordSmallState extends State<DashbordSmall> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   Row(
                     children: [
                       Expanded(
                         child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 10),
+                          padding: const EdgeInsets.symmetric(vertical: 10),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Color.fromRGBO(0, 102, 94, 1)),
+                              color: const Color.fromRGBO(0, 102, 94, 1)),
                           child: TextButton(
                             onPressed: () {
                               adddata();
@@ -504,11 +508,11 @@ class _DashbordSmallState extends State<DashbordSmall> {
                       ),
                       Expanded(
                         child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 8),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
-                                color: Color.fromRGBO(255, 93, 93, 1),
+                                color: const Color.fromRGBO(255, 93, 93, 1),
                                 width: 2),
                           ),
                           child: TextButton(
