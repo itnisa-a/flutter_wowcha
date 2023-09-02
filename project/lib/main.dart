@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'Modules/Componemt/TabAppBar.dart';
 import 'Modules/Home/Home_View.dart';
+import 'Services/firebase.dart';
 
 void main() {
+  call_db();
   runApp(const MyApp());
 }
 
