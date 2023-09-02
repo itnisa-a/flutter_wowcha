@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ku_t/Modules/Componemt/SideAppBar.dart';
-import 'package:ku_t/Modules/ManagerPage/ManagerPage.dart';
+import 'package:ku_t/Modules/ManagerPage/ManagerPageRoute.dart';
 import 'package:sidebarx/sidebarx.dart';
 
 class router extends StatefulWidget {
@@ -32,7 +32,7 @@ class _router extends State<router> {
                       switch (widget._controller.selectedIndex) {
                         case 0:
                           _key.currentState?.closeDrawer();
-                          return const ManagerPage();
+                          return const ManagerPageRoute();
 
                         //------------------------on test---------------------------------
 
