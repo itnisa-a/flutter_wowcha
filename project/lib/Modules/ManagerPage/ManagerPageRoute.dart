@@ -14,14 +14,14 @@ class ManagerPageRoute extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<ManagerPageRoute> {
-  int state = 0;
+  int Path = 0;
   @override
   Widget build(BuildContext context) {
-    if (state == 0) {
+    if (Path == 0) {
       return _PageImport(() => const ManagerImportPage());
-    } else if (state == 1) {
+    } else if (Path == 1) {
       return _Page(() => const MyWidget());
-    } else if (state == 2) {
+    } else if (Path == 2) {
       return _Page(() => const Test());
     } else
       return _Page(() => const MyWidget());
@@ -37,8 +37,8 @@ class _MyWidgetState extends State<ManagerPageRoute> {
               FloatingActionButton(
                 onPressed: (() {
                   setState(() {
-                    state = 0;
-                    print(state);
+                    Path = 0;
+                    print(Path);
                   });
                 }),
                 child: Text("Importing"),
@@ -46,8 +46,8 @@ class _MyWidgetState extends State<ManagerPageRoute> {
               FloatingActionButton(
                 onPressed: (() {
                   setState(() {
-                    state = 2;
-                    print(state);
+                    Path = 2;
+                    print(Path);
                   });
                 }),
                 child: Text("Test"),
