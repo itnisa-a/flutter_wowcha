@@ -27,7 +27,7 @@ class _MyWidgetState extends State<ManagerPageRoute> {
       return _Page(() => const MyWidget());
   }
 
-  Scaffold _Page(Widget function()) {
+  Scaffold _Page(Widget Function() function) {
     return Scaffold(
       appBar: TabAppBar(),
       body: Column(
@@ -38,10 +38,9 @@ class _MyWidgetState extends State<ManagerPageRoute> {
                 onPressed: (() {
                   setState(() {
                     Path = 0;
-                    print(Path);
                   });
                 }),
-                child: Text("Importing"),
+                child: const Text("Importing"),
               ),
               FloatingActionButton(
                 onPressed: (() {
@@ -50,7 +49,7 @@ class _MyWidgetState extends State<ManagerPageRoute> {
                     print(Path);
                   });
                 }),
-                child: Text("Test"),
+                child: const Text("Test"),
               ),
             ],
           ),
@@ -68,8 +67,8 @@ class _MyWidgetState extends State<ManagerPageRoute> {
           FloatingActionButton(
             onPressed: (() {
               setState(() {
-                state = 1;
-                print(state);
+                Path = 1;
+                print(Path);
               });
             }),
             child: Text("Dashboard"),
