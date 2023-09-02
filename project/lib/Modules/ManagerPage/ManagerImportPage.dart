@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ku_t/Modules/ManagerPage/ManagerDashboard.dart';
+import 'package:ku_t/Modules/ManagerPage/Dashbord/ManagerDashboard_View.dart';
 
 class ManagerImportPage extends StatefulWidget {
   const ManagerImportPage({super.key});
