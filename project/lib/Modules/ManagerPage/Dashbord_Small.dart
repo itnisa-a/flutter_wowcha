@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:ku_t/Friend/Dropdown/BasicsubjectModel.dart';
 import 'package:ku_t/Friend/Dropdown/CraditModel.dart';
 import 'package:ku_t/Friend/Dropdown/TeachernameModel.dart';
-import 'package:ku_t/modules/router/router.dart';
-import 'package:sidebarx/sidebarx.dart';
 
 class DashbordSmall extends StatefulWidget {
   const DashbordSmall({super.key});
@@ -16,7 +14,6 @@ class DashbordSmall extends StatefulWidget {
 class _DashbordSmallState extends State<DashbordSmall> {
   CollectionReference addsubject =
       FirebaseFirestore.instance.collection('subject');
-  final _key = GlobalKey<FormState>();
   late TextEditingController controller;
 
   TextEditingController coursecodeC = TextEditingController();
