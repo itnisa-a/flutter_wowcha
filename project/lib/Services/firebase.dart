@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 
+// ignore: non_constant_identifier_names
 void call_db() async{
   await Firebase.initializeApp(
     options: const FirebaseOptions(
