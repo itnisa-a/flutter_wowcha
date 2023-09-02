@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-AppBar TabAppBar(){
+// ignore: non_constant_identifier_names
+AppBar TabAppBar() {
   return AppBar(
     toolbarHeight: 60,
     title: const Text(
