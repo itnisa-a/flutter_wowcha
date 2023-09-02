@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ku_t/Modules/Componemt/TabAppBar.dart';
-import 'package:ku_t/Modules/ManagerPage/ManagerDashboard.dart';
+import 'package:ku_t/Modules/ManagerPage/Dashbord/ManagerDashboard_View.dart';
 import 'package:ku_t/Modules/ManagerPage/ManagerImportPage.dart';
 import 'package:ku_t/Modules/ManagerPage/Test.dart';
 
@@ -14,17 +14,17 @@ class ManagerPageRoute extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<ManagerPageRoute> {
-  int Path = 0;
+  String path = "Dashboard";
   @override
   Widget build(BuildContext context) {
-    if (Path == 0) {
+    if (path == "Import") {
       return _PageImport(() => const ManagerImportPage());
-    } else if (Path == 1) {
-      return _Page(() => const MyWidget());
-    } else if (Path == 2) {
+    } else if (path == "Dashboard") {
+      return _Page(() => const ManagerDashboard_View());
+    } else if (path == "Test") {
       return _Page(() => const Test());
     } else
-      return _Page(() => const MyWidget());
+      return _Page(() => const ManagerDashboard_View());
   }
 
   Scaffold _Page(Widget Function() function) {
@@ -37,7 +37,7 @@ class _MyWidgetState extends State<ManagerPageRoute> {
               FloatingActionButton(
                 onPressed: (() {
                   setState(() {
-                    Path = 0;
+                    path = "Import";
                   });
                 }),
                 child: const Text("Importing"),
@@ -45,7 +45,7 @@ class _MyWidgetState extends State<ManagerPageRoute> {
               FloatingActionButton(
                 onPressed: (() {
                   setState(() {
-                    Path = 2;
+                    path = "Test";
                     print(Path);
                   });
                 }),
@@ -67,11 +67,11 @@ class _MyWidgetState extends State<ManagerPageRoute> {
           FloatingActionButton(
             onPressed: (() {
               setState(() {
-                Path = 1;
+                path = "Dashboard";
                 print(Path);
               });
             }),
-            child: Text("Dashboard"),
+            child: const Text("Dashboard"),
           ),
           function(),
         ],
