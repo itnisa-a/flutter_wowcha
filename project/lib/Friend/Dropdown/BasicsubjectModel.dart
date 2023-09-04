@@ -4,8 +4,8 @@ class Basicsubject {
 }
 
 List<Basicsubject> basicsubject = [
-  Basicsubject(title: "1"),
-  Basicsubject(title: "2"),
-  Basicsubject(title: "3"),
-  Basicsubject(title: "4"),
+  Basicsubject(title: "คณิต"),
+  Basicsubject(title: "๋อังกฤษ"),
+  Basicsubject(title: "สังคม"),
+  Basicsubject(title: "วิทย์"),
 ];
