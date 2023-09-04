@@ -27,24 +27,44 @@ class _DashbordSmallState extends State<DashbordSmall> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _title(),
-            _selectYear(),
-            const SizedBox(height: 10),
-            _SearchSubject(), //ควย
-            const SizedBox(height: 10),
-            _ButtonSubject(),
-            const SizedBox(height: 10),
-            _ButtonAdd()
-          ],
-        )
-      ],
-    );
+    final orientation = MediaQuery.of(context).orientation;
+    return Container(
+        child: orientation == Orientation.portrait
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _title(),
+                      _selectYear(),
+                      const SizedBox(height: 10),
+                      _SearchSubject(), //ควย
+                      const SizedBox(height: 10),
+                      _ButtonSubject(),
+                      const SizedBox(height: 10),
+                      _ButtonAdd()
+                    ],
+                  )
+                ],
+              )
+            : Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _title(),
+                      _selectYear(),
+                      const SizedBox(height: 10),
+                      _SearchSubject(), //ควย
+                      const SizedBox(height: 10),
+                      _ButtonSubject(),
+                      const SizedBox(height: 10),
+                      _ButtonAdd()
+                    ],
+                  )
+                ],
+              ));
   }
 
   Container _title() {
