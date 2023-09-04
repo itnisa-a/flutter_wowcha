@@ -29,8 +29,8 @@ class _DashbordSmallState extends State<DashbordSmall> {
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;
     return Container(
-        child: orientation == Orientation.portrait
-            ? Column(
+        child: orientation == Orientation.portrait //short if/else 
+            ? Column( //is if
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Column(
@@ -48,7 +48,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
                   )
                 ],
               )
-            : Row(
+            : Row( //is else
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
