@@ -38,7 +38,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
             const SizedBox(height: 10),
             _SearchSubject(), //ควย
             const SizedBox(height: 10),
-            _ButtonSumject(),
+            _ButtonSubject(),
             const SizedBox(height: 10),
             _ButtonAdd()
           ],
@@ -94,8 +94,8 @@ class _DashbordSmallState extends State<DashbordSmall> {
           "2570"
         ].map<DropdownMenuItem<String?>>((e) {
           return DropdownMenuItem(
-            child: Text(e.toString()),
             value: e,
+            child: Text(e.toString()),
           );
         }).toList(),
       ),
@@ -162,7 +162,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
   }
 
   // ignore: non_constant_identifier_names
-  Container _ButtonSumject() {
+  Container _ButtonSubject() {
     return Container(
       width: MediaQuery.of(context).size.height,
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
