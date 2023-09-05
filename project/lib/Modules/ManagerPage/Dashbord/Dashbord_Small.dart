@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ku_t/Modules/ManagerPage/Dashbord/PopUp.dart';
 
@@ -10,13 +10,13 @@ class DashbordSmall extends StatefulWidget {
 }
 
 class _DashbordSmallState extends State<DashbordSmall> {
-  CollectionReference addsubject =
-      FirebaseFirestore.instance.collection('subject');
+  // CollectionReference addsubject =
+  //     FirebaseFirestore.instance.collection('subject');
   late TextEditingController controller;
   String? selectedValue; //N
 
-  TextEditingController coursecodeC = TextEditingController(); //y
-  TextEditingController coursenameC = TextEditingController();
+  //TextEditingController coursecodeC = TextEditingController(); //y
+  //TextEditingController coursenameC = TextEditingController();
 
   @override
   void dispose() {
@@ -47,13 +47,13 @@ class _DashbordSmallState extends State<DashbordSmall> {
                             _year(),
                             _selectYear(),
                             const SizedBox(height: 10),
-                            _SearchSubject(), //ควย
+                            _SearchSubject(),
                             const SizedBox(height: 10),
                             _ButtonSubject(),
                             const SizedBox(height: 10),
                             _ButtonAdd(),
                             const SizedBox(height: 10),
-                            _importSnbject()
+                            _importSubject()
                           ],
                         )
                       ],
@@ -78,15 +78,16 @@ class _DashbordSmallState extends State<DashbordSmall> {
                               Row(
                                 children: [
                                   const Expanded(
-                                      flex: 3,
-                                      child: SizedBox(
-                                        height: 70,
-                                      )),
+                                    flex: 3,
+                                    child: SizedBox(
+                                      height: 70,
+                                    )
+                                  ),
                                   Expanded(child: _ButtonSubject()),
                                   const SizedBox(width: 10),
                                   Expanded(child: _ButtonAdd()),
                                   const SizedBox(width: 10),
-                                  Expanded(child: _importSnbject())
+                                  Expanded(child: _importSubject())
                                 ],
                               )
                             ],
@@ -99,31 +100,31 @@ class _DashbordSmallState extends State<DashbordSmall> {
     );
   }
 
-Container _header() {
-  return Container(
-    alignment: Alignment.topLeft,
-    child: const Text(
-      "การจัดการข้อมูลหลักสูตร",
-      style: TextStyle(
-        fontWeight: FontWeight.bold,
-        fontSize: 28,
+  Container _header() {
+    return Container(
+      alignment: Alignment.topLeft,
+      child: const Text(
+        "การจัดการข้อมูลหลักสูตร",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 28,
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
-Container _year() {
-  return Container(
-    alignment: Alignment.topLeft,
-    child: const Text(
-      "ปีการศึกษา",
-      style: TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
+  Container _year() {
+    return Container(
+      alignment: Alignment.topLeft,
+      child: const Text(
+        "ปีการศึกษา",
+        style: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 
   Container _selectYear() {
     return Container(
@@ -167,7 +168,7 @@ Container _year() {
     );
   }
 
-  // ignore: non_constant_identifier_names
+    // ignore: non_constant_identifier_names
   Column _SearchSubject() {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -185,6 +186,7 @@ Container _year() {
         ),
         Row(
           children: [
+            //ช่องใส่รหัส/วิชา
             Expanded(
               child: Container(
                 width: MediaQuery.of(context).size.height,
@@ -215,7 +217,9 @@ Container _year() {
                       borderRadius: BorderRadius.circular(15),
                       color: const Color.fromRGBO(0, 102, 94, 1)),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      print("hit!");
+                    },
                     child: const Text(
                       'ค้นหา',
                       style: TextStyle(color: Colors.white, fontSize: 14),
@@ -230,7 +234,7 @@ Container _year() {
     );
   }
 
-  // ignore: non_constant_identifier_names
+    // ignore: non_constant_identifier_names
   Container _ButtonSubject() {
     return Container(
       width: MediaQuery.of(context).size.height,
@@ -242,7 +246,9 @@ Container _year() {
         // color: Color.fromRGBO(0, 102, 94, 1)
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          print("จัดการรายวิชา");
+        },
         child: const Text(
           'จัดการรายวิชา',
           style: TextStyle(
@@ -254,7 +260,7 @@ Container _year() {
     );
   }
 
-  // ignore: non_constant_identifier_names
+    // ignore: non_constant_identifier_names
   Container _ButtonAdd() {
     return Container(
       width: MediaQuery.of(context).size.height,
@@ -275,7 +281,7 @@ Container _year() {
     );
   }
 
-  Container _importSnbject() {
+  Container _importSubject() {
     return Container(
       width: MediaQuery.of(context).size.height,
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
@@ -284,7 +290,8 @@ Container _year() {
           color: Color.fromARGB(255, 0, 0, 0)),
       child: TextButton(
         onPressed: () {
-          openDialog();
+          //print("นำเข้าหลักสูตร");
+          Navigator.pushNamed(context, '/import');
         },
         child: const Text(
           'นำเข้าหลักสูตร',
@@ -297,5 +304,6 @@ Container _year() {
 
   Future openDialog() => showDialog(
       context: context,
-      builder: (context) => const Dialog(child: PopupManagerView()));
+    builder: (context) => const Dialog(child: PopupManagerView())
+  );
 }

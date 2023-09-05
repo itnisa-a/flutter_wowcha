@@ -343,9 +343,7 @@ class _ManagementPageState extends State<ManagementPage> {
                                       Expanded(
                                         flex: 3,
                                         child: Container(
-                                          width: MediaQuery.of(context)
-                                              .size
-                                              .height,
+                                          width: MediaQuery.of(context).size.height,
                                           decoration: BoxDecoration(
                                             color: const Color.fromRGBO(
                                                 230, 230, 230, 1),
