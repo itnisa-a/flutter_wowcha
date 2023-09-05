@@ -28,79 +28,102 @@ class _DashbordSmallState extends State<DashbordSmall> {
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;
-    return Container(
-        child: orientation == Orientation.portrait //short if/else
-            ? Column(
-                //is if
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _title(),
-                      _selectYear(),
-                      const SizedBox(height: 10),
-                      _SearchSubject(), //ควย
-                      const SizedBox(height: 10),
-                      _ButtonSubject(),
-                      const SizedBox(height: 10),
-                      _ButtonAdd(),
-                      const SizedBox(height: 10),
-                      _importSnbject()
-                    ],
-                  )
-                ],
-              )
-            : Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _title(),
-                      const SizedBox(height: 2),
-                      _selectYear(),
-                    ],
-                  ),
-                  const SizedBox(width: 15),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          _header(),
+          const Divider(height: 30),
+          Container(
+              child: orientation == Orientation.portrait //short if/else
+                  ? Column(
+                      //is if
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        _SearchSubject(),
-                        Row(
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Expanded(
-                                flex: 3,
-                                child: SizedBox(
-                                  height: 70,
-                                )),
-                            Expanded(child: _ButtonSubject()),
-                            const SizedBox(width: 10),
-                            Expanded(child: _ButtonAdd()),
-                            const SizedBox(width: 10),
-                            Expanded(child: _importSnbject())
+                            
+                            _year(),
+                            _selectYear(),
+                            const SizedBox(height: 10),
+                            _SearchSubject(), //ควย
+                            const SizedBox(height: 10),
+                            _ButtonSubject(),
+                            const SizedBox(height: 10),
+                            _ButtonAdd(),
+                            const SizedBox(height: 10),
+                            _importSnbject()
                           ],
                         )
                       ],
-                    ),
-                  )
-                ],
-              ));
-  }
-
-  Container _title() {
-    return Container(
-      alignment: Alignment.topLeft,
-      child: const Text(
-        "ปีการศึกษา",
-        style: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-        ),
+                    )
+                  : Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _year(),
+                            const SizedBox(height: 2),
+                            _selectYear(),
+                          ],
+                        ),
+                        const SizedBox(width: 15),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              _SearchSubject(),
+                              Row(
+                                children: [
+                                  const Expanded(
+                                      flex: 3,
+                                      child: SizedBox(
+                                        height: 70,
+                                      )),
+                                  Expanded(child: _ButtonSubject()),
+                                  const SizedBox(width: 10),
+                                  Expanded(child: _ButtonAdd()),
+                                  const SizedBox(width: 10),
+                                  Expanded(child: _importSnbject())
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    )),
+        ],
       ),
     );
   }
+
+Container _header() {
+  return Container(
+    alignment: Alignment.topLeft,
+    child: const Text(
+      "การจัดการข้อมูลหลักสูตร",
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 28,
+      ),
+    ),
+  );
+}
+
+Container _year() {
+  return Container(
+    alignment: Alignment.topLeft,
+    child: const Text(
+      "ปีการศึกษา",
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  );
+}
 
   Container _selectYear() {
     return Container(
