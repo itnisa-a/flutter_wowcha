@@ -32,27 +32,7 @@ class _MyWidgetState extends State<ManagerPageRoute> {
       appBar: TabAppBar(),
       body: Column(
         children: [
-          Row(
-            children: [
-              FloatingActionButton(
-                onPressed: (() {
-                  setState(() {
-                    path = "Import";
-                  });
-                }),
-                child: const Text("Importing"),
-              ),
-              FloatingActionButton(
-                onPressed: (() {
-                  setState(() {
-                    path = "Test";
-                    print(Path);
-                  });
-                }),
-                child: const Text("Test"),
-              ),
-            ],
-          ),
+          Row(),
           function(),
         ],
       ),
