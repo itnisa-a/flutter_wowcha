@@ -52,7 +52,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
               SizedBox(width: 10,),
                       Container(
                         width: 70,
-                        padding: EdgeInsets.symmetric(vertical: 8),
+                        padding: EdgeInsets.symmetric(vertical: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Color.fromRGBO(0, 102, 94, 1)),

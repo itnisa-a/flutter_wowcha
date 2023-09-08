@@ -95,7 +95,9 @@ class _TabletimeState extends State<Tabletime> {
             items: semester
                 .map((e) => DropdownMenuItem<String?>(
                   
-                    value: e.title, child: Text(e.title!)))
+                    value: e.title, child: Text(e.title!,
+                    style: textStylehint(),
+                    )))
                 .toList(),
             onChanged: (value) {
               setState(() {
