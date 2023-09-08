@@ -1,5 +1,8 @@
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:ku_t/Friend/Dropdown/YearModel.dart';
+import 'package:ku_t/Friend/modules/component/Header_web.dart';
+import 'package:ku_t/Friend/widget/search_bar_widget.dart';
 import 'package:ku_t/Modules/ManagerPage/Dashbord/PopUp.dart';
 
 class DashbordSmall extends StatefulWidget {
@@ -14,6 +17,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
   //     FirebaseFirestore.instance.collection('subject');
   late TextEditingController controller;
   String? selectedValue; //N
+  String? yearValue;
 
   //TextEditingController coursecodeC = TextEditingController(); //y
   //TextEditingController coursenameC = TextEditingController();
@@ -28,6 +32,7 @@ class _DashbordSmallState extends State<DashbordSmall> {
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;
+<<<<<<< Updated upstream
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -126,8 +131,61 @@ class _DashbordSmallState extends State<DashbordSmall> {
     );
   }
 
+=======
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+          child: orientation == Orientation.portrait
+          ? Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              // _title(),
+               _selectYear(),
+              const SizedBox(height: 10),
+              SearchBarWidget(
+                        isReadOnly: true,
+                        hasBackButton: false, 
+                      ),
+              const SizedBox(height: 10),
+              _ButtonSubject(),
+              const SizedBox(height: 10),
+              _ButtonAdd(),
+              const SizedBox(height: 10),
+              _ButtonCourses()
+            ],
+          )
+          : Row(
+            children: [
+               _selectYear(),
+               const SizedBox(width: 10),
+              Expanded(
+              flex: 3,
+              child: SearchBarWidget(
+                        isReadOnly: true,
+                        hasBackButton: false, 
+                      ),),
+              const SizedBox(width: 30,),
+             Expanded(
+              child: _ButtonSubject()),
+              const SizedBox(width: 10),
+              Expanded(
+                child: _ButtonAdd()),
+                const SizedBox(width: 10),
+              Expanded(child: _ButtonCourses())
+            ],
+          )
+        )
+      ],
+    );
+  }
+
+>>>>>>> Stashed changes
   Container _selectYear() {
+    final orientation = MediaQuery.of(context).orientation;
     return Container(
+<<<<<<< Updated upstream
       width: 100,
       padding: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
@@ -164,9 +222,48 @@ class _DashbordSmallState extends State<DashbordSmall> {
             child: Text(e.toString()),
           );
         }).toList(),
+=======
+      child : Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+      alignment: Alignment.bottomLeft,
+      child: Text(
+        "ปีการศึกษา",
+        style: textStyleHeadDrop()
+>>>>>>> Stashed changes
       ),
+    ),
+          Container(
+            width: orientation == Orientation.portrait ? double.infinity : 100,
+            padding: EdgeInsets.symmetric(horizontal: 10),
+                      decoration: decoration(),
+                      child: DropdownButton(
+                    
+            hint: Text("เลือก",
+            style: textStylehint()),
+            underline: SizedBox(),
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            focusColor: Colors.white,
+            dropdownColor: Colors.white,
+            isExpanded: true,
+            value: yearValue,
+            items: year
+                .map((e) => DropdownMenuItem<String?>(
+                    value: e.title, child: Text(e.title!,
+                    style: textStylehint(),)))
+                .toList(),
+            onChanged: (value) {
+              setState(() {
+                yearValue = value.toString();
+              });
+            }),
+                    ),
+        ],
+      )
     );
   }
+<<<<<<< Updated upstream
 
     // ignore: non_constant_identifier_names
   Column _SearchSubject() {
@@ -235,8 +332,13 @@ class _DashbordSmallState extends State<DashbordSmall> {
   }
 
     // ignore: non_constant_identifier_names
+=======
+  // ignore: non_constant_identifier_names
+>>>>>>> Stashed changes
   Container _ButtonSubject() {
+    final orientation = MediaQuery.of(context).orientation;
     return Container(
+<<<<<<< Updated upstream
       width: MediaQuery.of(context).size.height,
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
       decoration: BoxDecoration(
@@ -255,29 +357,61 @@ class _DashbordSmallState extends State<DashbordSmall> {
               color: Color.fromRGBO(0, 102, 94, 1),
               fontWeight: FontWeight.bold,
               fontSize: 14),
+=======
+      child: Container(
+        margin: orientation == Orientation.portrait ? null : EdgeInsets.only(top: 23),
+        width: MediaQuery.of(context).size.height,
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+        decoration: decorationborder(),
+        child: TextButton(
+          onPressed: () {},
+          child: Text(
+            'จัดการรายวิชา',
+            style: textStylegreen()
+          ),
+>>>>>>> Stashed changes
         ),
-      ),
+      )
     );
   }
 
     // ignore: non_constant_identifier_names
   Container _ButtonAdd() {
+    final orientation = MediaQuery.of(context).orientation;
     return Container(
-      width: MediaQuery.of(context).size.height,
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: const Color.fromRGBO(0, 102, 94, 1)),
-      child: TextButton(
-        onPressed: () {
-          openDialog();
-        },
-        child: const Text(
-          'เพิ่มรายวิชา',
-          style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
+      child: Container(
+        margin: orientation == Orientation.portrait ? null : EdgeInsets.only(top: 23),
+        width: MediaQuery.of(context).size.height,
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        decoration: decorationgreen(),
+        child: TextButton(
+          onPressed: () {
+            openDialog();
+          },
+          child: Text(
+            'เพิ่มรายวิชา',
+            style: textStylewhite(),
+          ),
         ),
-      ),
+      )
+    );
+  }
+
+  Container _ButtonCourses() {
+    final orientation = MediaQuery.of(context).orientation;
+    return Container(
+      child: Container(
+        margin: orientation == Orientation.portrait ? null : EdgeInsets.only(top: 23),
+        width: MediaQuery.of(context).size.height,
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal:10),
+          decoration: decorationblack(),
+            child: TextButton(
+          onPressed: () {
+          },
+          child: Text('นำเข้าหลักสูตร',
+          style: textStylewhite()),
+            ),
+            )
     );
   }
 
